@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { QRCodeSVG } from 'qrcode.react';
-import ConnectBtn from './connectWallet';
+
 
 function App() {
   const [amount, setAmount] = useState('');
@@ -23,9 +23,17 @@ function App() {
 
   return (
     <>
-      <ConnectBtn />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r p-4 sm:p-6 md:p-8">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 sm:mb-8">Send Money</h1>
+    
+    
+      <div className=" bg-gradient-to-r p-2 ">
+        <div className='rounded p-2 '>
+          <h1 className="text-2xl font-extrabold text-blue-400 ">Invocare </h1>
+          <p className='text-xs font-medium'>Change the way you recieve money</p>
+        </div>
+       
+        <div className='flex flex-col items-center justify-center min-h-[400px] sm:p-6 md:p-8 p-4'>
+
+        <h1 className="text-xl font-extrabold mb-6 sm:mb-8">Create Invoice</h1>
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md">
           <input
             type="number"
@@ -46,6 +54,9 @@ function App() {
             </div>
           )}
         </div>
+          
+        </div>
+       
       </div>
     </>
   );
